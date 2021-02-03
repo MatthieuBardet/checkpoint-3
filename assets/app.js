@@ -15,7 +15,6 @@ const $ = require('jquery');
 require('bootstrap');
 
 //scroll down button
-
 $(function() {
     $('.scroll-down').click (function() {
         $('html, body').animate({scrollTop: $('section.skills').offset().top }, 'slow');
