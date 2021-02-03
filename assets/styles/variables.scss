@@ -1,9 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans&display=swap');
 
-$primary: #f58700;
-$secondary: #ffa941;
+$primary: #ffa941;
+$secondary: #f58700;
 $light: #ffedd6;
-$dark: #140b00;
+$dark: #110a00;
 
 $text-font: 'Open Sans', sans-serif;
 $title-font: 'Montserrat', sans-serif;
+
+$h1-font-size: 48px;
+$p-font-size: 18px;
+
+$spacing: 8px;
+$spacing2: $spacing*2;
+$spacing4: $spacing*4;
+$spacing8: $spacing*8;
