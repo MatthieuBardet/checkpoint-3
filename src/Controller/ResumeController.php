@@ -17,6 +17,8 @@ class ResumeController extends AbstractController
 {
     /**
      * @Route("/", name="resume_index", methods={"GET"})
+     * @param ResumeRepository $resumeRepository
+     * @return Response
      */
     public function index(ResumeRepository $resumeRepository): Response
     {
@@ -27,6 +29,8 @@ class ResumeController extends AbstractController
 
     /**
      * @Route("/new", name="resume_new", methods={"GET","POST"})
+     * @param Request $request
+     * @return Response
      */
     public function new(Request $request): Response
     {
