@@ -1,0 +1,7 @@
+vich_uploader:
+  db_driver: orm
+
+  mappings:
+      skill_logo:
+         uri_prefix: /images/skill
+         upload_destination: '%upload_directory%'
