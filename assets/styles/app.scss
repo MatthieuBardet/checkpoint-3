@@ -1,1 +1,16 @@
 @import "~bootstrap/scss/bootstrap";
+@import 'variables.scss';
+
+body {
+  font-family: $text-font;
+}
+
+h1, h2, h3, h4 {
+  font-family: $title-font;
+  font-weight: 700;
+  color: $primary;
+}
+
+.second-color {
+  color: $secondary;
+}
