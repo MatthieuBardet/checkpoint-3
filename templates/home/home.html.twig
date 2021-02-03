@@ -12,8 +12,8 @@
         <div class="container row align-items-center justify-content-center">
             <div class="text-center col-12 col-xl-8">
                 <div class="header-title">
-                    <h1>Matthieu Bardet</h1>
-                    <h2>Développeur Web</h2>
+                    <h1>MATTHIEU BARDET</h1>
+                    <h2>DÉVELOPPEUR WEB</h2>
                 </div>
                 <div class="header-text">
                     <p class="light">
@@ -26,6 +26,19 @@
                     </p>
                 </div>
             </div>
+            <a href="#" class="scroll-down" address="true"></a>
         </div>
     </header>
+    <section class="skills">
+        <div class="container">
+            <h2 class="text-center mb-5">COMPÉTENCES</h2>
+            <div class="row">
+                {% for skill in skills %}
+                    <div class="skill-card col-10 col-xl-3 d-flex justify-content-center">
+                        <img src="{{ asset('uploads/'~skill.logo) }}" alt="{{ skill.name }}" title="{{ skill.name }}">
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
 {% endblock %}

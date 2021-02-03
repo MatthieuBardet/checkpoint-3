@@ -19,3 +19,81 @@ header {
   border-bottom: 1px solid $light;
   border-top: 1px solid $light;
 }
+
+.skills {
+  padding: $spacing16 0;
+  background-color: $dark;
+  height: 100vh;
+}
+
+.skill-card {
+  background-color: $lesser-dark;
+  margin: $spacing4 $spacing4;
+  padding: $spacing2;
+  border-radius: 3px;
+  box-shadow: 5px 5px 0px 0px $light-opacity;
+  transition: all 0.5s 0s ease;
+}
+
+.skill-card:hover {
+  transform: scale(1.1, 1.1);
+}
+
+.skill-card img {
+  max-width: 100px;
+  max-height: 100px;
+  object-fit: cover;
+}
+
+.scroll-down {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  margin-left: -16px;
+  display: block;
+  width: 32px;
+  height: 32px;
+  border: 2px solid #FFF;
+  background-size: 14px auto;
+  border-radius: 50%;
+  z-index: 2;
+  -webkit-animation: bounce 2s infinite 2s;
+  animation: bounce 2s infinite 2s;
+  -webkit-transition: all .2s ease-in;
+  transition: all .2s ease-in;
+}
+
+.scroll-down:before {
+  position: absolute;
+  top: calc(50% - 8px);
+  left: calc(50% - 6px);
+  transform: rotate(-45deg);
+  display: block;
+  width: 12px;
+  height: 12px;
+  content: "";
+  border: 2px solid white;
+  border-width: 0px 0 2px 2px;
+}
+
+@keyframes bounce {
+  0%,
+  100%,
+  20%,
+  50%,
+  80% {
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+  40% {
+    -webkit-transform: translateY(-10px);
+    -ms-transform: translateY(-10px);
+    transform: translateY(-10px);
+  }
+  60% {
+    -webkit-transform: translateY(-5px);
+    -ms-transform: translateY(-5px);
+    transform: translateY(-5px);
+  }
+}
