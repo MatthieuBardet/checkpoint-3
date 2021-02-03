@@ -3,6 +3,7 @@
 
 body {
   font-family: $text-font;
+  font-size: $p-font-size;
 }
 
 h1, h2, h3, h4 {
@@ -11,6 +12,14 @@ h1, h2, h3, h4 {
   color: $primary;
 }
 
+h1 {
+  font-size: $h1-font-size;
+}
+
 .second-color {
   color: $secondary;
+}
+
+.light {
+  color: $light;
 }

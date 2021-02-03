@@ -1,9 +1,31 @@
 {% extends 'base.html.twig' %}
+
 {% block title %}{{ parent() }}Accueil{% endblock %}
 
+    {% block stylesheets %}
+        {{ parent() }}
+        {{ encore_entry_link_tags('home') }}
+    {% endblock %}
+
 {% block body %}
-    <header>
-        <h1>Matthieu Bardet</h1>
-        <h2 class="second-color">Développeur Web</h2>
+    <header class="d-flex flex-column align-items-center justify-content-center">
+        <div class="container row align-items-center justify-content-center">
+            <div class="text-center col-12 col-xl-8">
+                <div class="header-title">
+                    <h1>Matthieu Bardet</h1>
+                    <h2>Développeur Web</h2>
+                </div>
+                <div class="header-text">
+                    <p class="light">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis semper nunc ante, sit amet
+                        malesuada
+                        arcu scelerisque ut.
+                    </p>
+                    <p class="light mb-0">
+                        <b>Maecenas eget augue bibendum, consectetur ex sit amet, elementum dui.</b>
+                    </p>
+                </div>
+            </div>
+        </div>
     </header>
 {% endblock %}

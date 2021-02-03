@@ -1,0 +1,21 @@
+@import 'variables.scss';
+
+header {
+  background: $dark;
+  height: 100vh;
+}
+
+.header-title {
+  margin-bottom: $spacing8;
+}
+
+.header-title h1 {
+  margin-bottom: $spacing4;
+}
+
+
+.header-text {
+  padding: $spacing8;
+  border-bottom: 1px solid $light;
+  border-top: 1px solid $light;
+}
