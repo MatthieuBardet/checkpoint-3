@@ -2,15 +2,19 @@
 <html>
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>{% block title %}Checkpoint 3 | {% endblock %}</title>
     {% block stylesheets %}
         {{ encore_entry_link_tags('app') }}
+        {{ encore_entry_link_tags('navbar') }}
     {% endblock %}
 </head>
 <body>
+{% include '_includes/_navbar.html.twig' %}
 {% block body %}{% endblock %}
 </body>
 {% block javascripts %}
     {{ encore_entry_script_tags('app') }}
+    {{ encore_entry_script_tags('navbarjs') }}
 {% endblock %}
 </html>
