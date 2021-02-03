@@ -4,14 +4,19 @@ $primary: #ffa941;
 $secondary: #f58700;
 $light: #ffedd6;
 $dark: #110a00;
+$lesser-dark: #1c1c1c;
+$dark-opacity: rgba(17, 10, 0, 0.5);
+$light-opacity: rgba(255, 237, 214, 0.6);
 
 $text-font: 'Open Sans', sans-serif;
 $title-font: 'Montserrat', sans-serif;
 
-$h1-font-size: 48px;
+$h1-font-size: 64px;
+$h2-font-size: 48px;
 $p-font-size: 18px;
 
 $spacing: 8px;
 $spacing2: $spacing*2;
 $spacing4: $spacing*4;
 $spacing8: $spacing*8;
+$spacing16: $spacing*16;
