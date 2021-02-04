@@ -7,11 +7,13 @@
     {% block stylesheets %}
         {{ encore_entry_link_tags('app') }}
         {{ encore_entry_link_tags('navbar') }}
+        {{ encore_entry_link_tags('footer') }}
     {% endblock %}
 </head>
 <body>
 {% include '_includes/_navbar.html.twig' %}
 {% block body %}{% endblock %}
+{% include '_includes/_footer.html.twig' %}
 </body>
 {% block javascripts %}
     {{ encore_entry_script_tags('app') }}
