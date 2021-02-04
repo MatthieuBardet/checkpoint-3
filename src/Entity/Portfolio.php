@@ -3,10 +3,18 @@
 namespace App\Entity;
 
 use App\Repository\PortfolioRepository;
+use DateTime;
+use DateTimeInterface;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\HttpFoundation\File\File;
+use Vich\UploaderBundle\Mapping\Annotation as Vich;
+use Symfony\Component\Validator\Constraints as Assert;
+use Symfony\Component\Form\Extension\Core\Type\FileType;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 
 /**
  * @ORM\Entity(repositoryClass=PortfolioRepository::class)
+ * @Vich\Uploadable
  */
 class Portfolio
 {
@@ -15,27 +23,41 @@ class Portfolio
      * @ORM\GeneratedValue
      * @ORM\Column(type="integer")
      */
-    private $id;
+    private ?int $id;
 
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $name;
+    private ?string $name;
 
     /**
      * @ORM\Column(type="date", nullable=true)
      */
-    private $date;
+    private ?\DateTimeInterface $date;
 
     /**
      * @ORM\Column(type="text")
      */
-    private $cover;
+    private ?string $cover='';
 
     /**
      * @ORM\Column(type="text")
      */
-    private $content;
+    private ?string $content;
+
+    /**
+     * @Vich\UploadableField(mapping="cover_image", fileNameProperty="cover")
+     * @var File|null
+     * @Assert\File(
+     *     maxSize="1000000",
+     *     mimeTypes = {"image/png", "image/jpeg", "image/jpg", "image/gif",})
+     */
+    private ?File $coverImage = null;
+
+    /**
+     * @ORM\Column(type="datetime", nullable=true)
+     */
+    private ?DateTimeInterface $updatedAt;
 
     public function getId(): ?int
     {
@@ -71,7 +93,7 @@ class Portfolio
         return $this->cover;
     }
 
-    public function setCover(string $cover): self
+    public function setCover(?string $cover): self
     {
         $this->cover = $cover;
 
@@ -88,5 +110,42 @@ class Portfolio
         $this->content = $content;
 
         return $this;
+    }
+
+    /**
+     * @return File|null
+     */
+    public function getCoverImage(): ?File
+    {
+        return $this->coverImage;
+    }
+
+    /**
+     * @param File|null $image
+     */
+    public function setCoverImage(?File $image = null): Portfolio
+    {
+        $this->coverImage = $image;
+        if ($image) {
+            $this->updatedAt = new DateTime('now');
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return DateTimeInterface|null
+     */
+    public function getUpdatedAt(): ?DateTimeInterface
+    {
+        return $this->updatedAt;
+    }
+
+    /**
+     * @param DateTimeInterface|null $updatedAt
+     */
+    public function setUpdatedAt(?DateTimeInterface $updatedAt): self
+    {
+        $this->updatedAt = $updatedAt;
     }
 }
