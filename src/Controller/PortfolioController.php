@@ -11,12 +11,22 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 /**
- * @Route("/portfolio")
+ * @Route("/portfolio", name="portfolio_")
  */
 class PortfolioController extends AbstractController
 {
     /**
-     * @Route("/", name="portfolio_index", methods={"GET"})
+     * @Route("/home/", name="home", methods={"GET"})
+     */
+    public function home(PortfolioRepository $portfolioRepository): Response
+    {
+        return $this->render('portfolio/home.html.twig', [
+            'portfolios' => $portfolioRepository->findAll(),
+        ]);
+    }
+
+    /**
+     * @Route("/", name="index", methods={"GET"})
      */
     public function index(PortfolioRepository $portfolioRepository): Response
     {
@@ -26,7 +36,7 @@ class PortfolioController extends AbstractController
     }
 
     /**
-     * @Route("/new", name="portfolio_new", methods={"GET","POST"})
+     * @Route("/new", name="new", methods={"GET","POST"})
      */
     public function new(Request $request): Response
     {
@@ -49,7 +59,7 @@ class PortfolioController extends AbstractController
     }
 
     /**
-     * @Route("/{id}", name="portfolio_show", methods={"GET"})
+     * @Route("/{id}", name="show", methods={"GET"})
      */
     public function show(Portfolio $portfolio): Response
     {
@@ -59,7 +69,7 @@ class PortfolioController extends AbstractController
     }
 
     /**
-     * @Route("/{id}/edit", name="portfolio_edit", methods={"GET","POST"})
+     * @Route("/{id}/edit", name="edit", methods={"GET","POST"})
      */
     public function edit(Request $request, Portfolio $portfolio): Response
     {
@@ -79,7 +89,7 @@ class PortfolioController extends AbstractController
     }
 
     /**
-     * @Route("/{id}", name="portfolio_delete", methods={"DELETE"})
+     * @Route("/{id}", name="delete", methods={"DELETE"})
      */
     public function delete(Request $request, Portfolio $portfolio): Response
     {
