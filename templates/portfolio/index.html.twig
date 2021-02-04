@@ -1,41 +1,43 @@
-{% extends 'base.html.twig' %}
+{% extends 'adminbase.html.twig' %}
 
 {% block title %}Portfolio index{% endblock %}
 
 {% block body %}
-    <h1>Portfolio index</h1>
-
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Name</th>
-                <th>Date</th>
-                <th>Cover</th>
-                <th>Content</th>
-                <th>actions</th>
-            </tr>
-        </thead>
-        <tbody>
-        {% for portfolio in portfolios %}
-            <tr>
-                <td>{{ portfolio.id }}</td>
-                <td>{{ portfolio.name }}</td>
-                <td>{{ portfolio.date ? portfolio.date|date('Y-m-d') : '' }}</td>
-                <td>{{ portfolio.cover }}</td>
-                <td>{{ portfolio.content }}</td>
-                <td>
-                    <a href="{{ path('portfolio_show', {'id': portfolio.id}) }}">show</a>
-                    <a href="{{ path('portfolio_edit', {'id': portfolio.id}) }}">edit</a>
-                </td>
-            </tr>
-        {% else %}
-            <tr>
-                <td colspan="6">no records found</td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
-
-    <a href="{{ path('portfolio_new') }}">Create new</a>
+    <section class="admin d-flex flex-column align-items-center">
+        <h1 class="text-center admin-h1">RÉALISATIONS</h1>
+        <a class="btn btn-primary" href="{{ path('portfolio_new') }}">Ajouter</a>
+        <div class="d-flex align-items-center">
+            <table class="table table-responsive">
+                <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Date</th>
+                    <th>Cover</th>
+                    <th>Content</th>
+                    <th>actions</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for portfolio in portfolios %}
+                    <tr>
+                        <td>{{ portfolio.id }}</td>
+                        <td>{{ portfolio.name }}</td>
+                        <td>{{ portfolio.date ? portfolio.date|date('Y-m-d') : '' }}</td>
+                        <td>{{ portfolio.cover }}</td>
+                        <td>{{ portfolio.content }}</td>
+                        <td>
+                            <a class="btn btn-primary" href="{{ path('portfolio_show', {'id': portfolio.id}) }}">Voir</a>
+                            <a class="btn btn-primary" href="{{ path('portfolio_edit', {'id': portfolio.id}) }}">Éditer</a>
+                        </td>
+                    </tr>
+                {% else %}
+                    <tr>
+                        <td colspan="6">no records found</td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </section>
 {% endblock %}

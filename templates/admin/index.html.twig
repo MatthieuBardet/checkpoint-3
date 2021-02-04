@@ -1,0 +1,19 @@
+{% extends 'adminbase.html.twig' %}
+
+{% block title %}{{ parent() }}Accueil{% endblock %}
+
+{% block body %}
+    <section class="admin d-flex flex-column justify-content-center align-items-center">
+        <h1 class="text-center">PANEL ADMINISTRATEUR</h1>
+        <div class="d-flex justify-content-around w-50">
+            <div class="admin-card d-flex flex-column justify-content-center align-items-center">
+                <h3 class="light">Compétences</h3>
+                <a href="{{ path('skill_index') }}" class="btn btn-primary">Administrer</a>
+            </div>
+            <div class="admin-card d-flex flex-column justify-content-center align-items-center">
+                <h3 class="light">Réalisations</h3>
+                <a href="{{ path('portfolio_index') }}" class="btn btn-primary">Administrer</a>
+            </div>
+        </div>
+    </section>
+{% endblock %}

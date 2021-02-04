@@ -1,11 +1,15 @@
-{% extends 'base.html.twig' %}
+{% extends 'adminbase.html.twig' %}
 
 {% block title %}New Skill{% endblock %}
 
 {% block body %}
-    <h1>Create new Skill</h1>
+    <section class="admin">
+        <h1 class="text-center">AJOUTER UNE COMPÉTENCE</h1>
 
-    {{ include('skill/_form.html.twig') }}
+        <div class="text-center">
+            {{ include('skill/_form.html.twig') }}
 
-    <a href="{{ path('skill_index') }}">back to list</a>
+            <a href="{{ path('skill_index') }}">Retour</a>
+        </div>
+    </section>
 {% endblock %}
