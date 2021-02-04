@@ -1,7 +1,7 @@
 @import 'variables.scss';
 
 body {
-  background: $lesser-dark
+  background: $light
 }
 
 .admin {
@@ -12,14 +12,14 @@ body {
   $margin-bottom: $spacing8 !important;
 }
 
-.admin a {
-  background: $light;
+.admin a, .admin button {
+  background: $lesser-dark;
+  color: $light;
   border: none;
-  color: $dark;
   font-weight: 700;
   height: 48px;
   width: 148px;
-  margin: $spacing 0;
+  margin: $spacing;
 }
 
 .admin a:hover {
@@ -27,7 +27,7 @@ body {
   color: $light;
 }
 
-.admin a:focus {
+.admin a:focus, .admin a:hover, .admin a:focus, .admin button:focus, .admin button:hover, .admin button:focus {
   background: $secondary;
   color: $light;
 }
@@ -45,7 +45,7 @@ table {
   margin-top: $spacing8;
 }
 
-th, td {
+th {
   color: $light;
 }
 
@@ -53,6 +53,7 @@ th {
   background: $dark;
 }
 
+/*
 .btn-delete {
   background: $dark;
   border: none;
@@ -100,4 +101,4 @@ th {
 .admin button:hover {
   background: $primary;
   color: $light;
-}
+}*/
