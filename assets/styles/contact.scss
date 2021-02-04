@@ -1,0 +1,49 @@
+@import 'variables.scss';
+
+.contact {
+    background-color: $dark;
+    height: 100vh;
+}
+
+.contact h1 {
+    margin-bottom: $spacing16;
+}
+
+.contact label {
+    color: $light;
+}
+
+.contact input, .contact textarea {
+    border: none;
+    border-bottom: 1px solid $light;
+    background: $light-opacity-low;
+    height: 48px;
+    border-radius: 3px 3px 0 0;
+    color: $light;
+    margin: $spacing2 0;
+    width: 30vw;
+}
+
+.contact textarea {
+    height: 128px;
+}
+
+.contact input:focus, .contact textarea:focus {
+    background: $light-opacity;
+    border: none;
+}
+
+.contact button {
+    background: $light;
+    border: none;
+    color: $dark;
+    font-weight: 700;
+    height: 48px;
+    width: 128px;
+    margin: $spacing4 0;
+}
+
+.contact button:hover {
+    background: $primary;
+    color: $light;
+}
