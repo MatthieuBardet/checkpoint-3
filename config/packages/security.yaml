@@ -41,3 +41,4 @@ security:
   access_control:
     - { path: ^/resume/, roles: ROLE_CONTRIBUTOR }
     - { path: ^/skill/, roles: ROLE_CONTRIBUTOR }
+    - { path: ^/admin/, roles: ROLE_CONTRIBUTOR }
