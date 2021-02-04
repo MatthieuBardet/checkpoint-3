@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ parent() }}Portfolio{% endblock %}
+
+    {% block stylesheets %}
+        {{ parent() }}
+        {{ encore_entry_link_tags('portfolio') }}
+    {% endblock %}
+
+{% block body %}
+    <section class="realisations">
+        <h1 class="text-center">RÉALISATIONS</h1>
+        <div>
+            {% for portfolio in portfolios %}
+                {% if loop.index is odd %}
+                    <div class="realisations-card d-flex justify-content-between">
+                        <img src="{{ asset('uploads/'~portfolio.cover) }}" alt="{{ portfolio.name }}">
+                        <div>
+                            <h2>{{ portfolio.name }}</h2>
+                            <p>{{ portfolio.content }}</p>
+                            <p><b>Réalisé en {{ portfolio.date|date('M Y') }}</b></p>
+                        </div>
+                    </div>
+                {% else %}
+                    <div class="realisations-card d-flex justify-content-between">
+                        <div>
+                            <h2>{{ portfolio.name }}</h2>
+                            <p>{{ portfolio.content }}</p>
+                            <p><b>Réalisé en {{ portfolio.date|date('M Y') }}</b></p>
+                        </div>
+                        <img src="{{ asset('uploads/'~portfolio.cover) }}" alt="{{ portfolio.name }}">
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </section>
+{% endblock %}

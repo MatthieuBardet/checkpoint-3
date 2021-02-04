@@ -27,6 +27,7 @@ Encore
     .addEntry('contact', './assets/styles/contact.scss')
     .addEntry('footer', './assets/styles/footer.scss')
     .addEntry('admin', './assets/styles/admin.scss')
+    .addEntry('portfolio', './assets/styles/portfolio.scss')
 
     // enables the Symfony UX Stimulus bridge (used in assets/bootstrap.js)
     .enableStimulusBridge('./assets/controllers.json')

@@ -1,26 +1,26 @@
 @import 'variables.scss';
 
 footer {
-background: $lesser-dark;
-color: $light;
-padding: $spacing2 0;
+  background: $lesser-dark;
+  color: $light;
+  padding: $spacing2 0;
 }
 
 footer .mail {
-    margin-right: $spacing4;
+  margin-right: $spacing4;
 }
 
 footer .bi-linkedin {
-    margin-left: $spacing4;
+  margin-left: $spacing4;
 }
 
 footer a:hover {
-color: $primary;
+  color: $primary;
 }
 
 footer .before {
-position: relative;
-bottom: 2px;
-margin-right: $spacing;
-color: $primary;
+  position: relative;
+  bottom: 2px;
+  margin-right: $spacing;
+  color: $primary;
 }
