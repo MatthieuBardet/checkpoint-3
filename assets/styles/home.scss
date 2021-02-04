@@ -20,10 +20,9 @@ header {
   border-top: 1px solid $light;
 }
 
-.skills {
-  padding: $spacing16 0;
+.skills, .portfolio {
+  padding: $spacing24 0;
   background-color: $dark;
-  height: 100vh;
 }
 
 .skill-card {
@@ -96,4 +95,31 @@ header {
     -ms-transform: translateY(-5px);
     transform: translateY(-5px);
   }
+}
+
+.portfolio a {
+    background: $light;
+    border: none;
+    color: $dark;
+    font-weight: 700;
+    height: 48px;
+    width: 148px;
+    margin: $spacing 0;
+}
+
+.portfolio a:hover {
+    background: $primary;
+    color: $light;
+}
+
+.portfolio-card-body {
+background-color: $lesser-dark;
+}
+
+.portfolio .card {
+border: none;
+  border-radius: 3px;
+  box-shadow: 5px 5px 0px 0px $light-opacity;
+  padding: 0;
+  margin: $spacing4 0;
 }

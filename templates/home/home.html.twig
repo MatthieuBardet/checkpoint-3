@@ -41,4 +41,20 @@
             </div>
         </div>
     </section>
+    <section class="portfolio">
+        <div class="container">
+            <h2 class="text-center mb-5">RÉALISATIONS</h2>
+            <div class="row d-flex flex-wrap justify-content-between">
+                {% for portfolio in portfolios %}
+                    <div class="card col-8 col-md-10 col-lg-5">
+                        <img class="card-img-top" src="{{ asset('uploads/'~portfolio.cover) }}" alt="{{ portfolio.name }}" title="{{ portfolio.name }}">
+                        <div class="portfolio-card-body card-body d-flex flex-column align-items-center">
+                            <h3 class="card-title">{{ portfolio.name }}</h3>
+                            <a href="#" class="btn btn-primary">En savoir plus</a>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
 {% endblock %}
