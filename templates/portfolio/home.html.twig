@@ -13,7 +13,7 @@
         <div>
             {% for portfolio in portfolios %}
                 {% if loop.index is odd %}
-                    <div class="realisations-card d-flex justify-content-between">
+                    <div id="{{ portfolio.name }}" class="realisations-card d-flex justify-content-between">
                         <img src="{{ asset('uploads/'~portfolio.cover) }}" alt="{{ portfolio.name }}">
                         <div>
                             <h2>{{ portfolio.name }}</h2>
@@ -22,7 +22,7 @@
                         </div>
                     </div>
                 {% else %}
-                    <div class="realisations-card d-flex justify-content-between">
+                    <div id="{{ portfolio.name }}" class="reverse realisations-card d-flex justify-content-between">
                         <div>
                             <h2>{{ portfolio.name }}</h2>
                             <p>{{ portfolio.content }}</p>

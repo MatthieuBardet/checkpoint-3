@@ -47,3 +47,30 @@
     background: $primary;
     color: $light;
 }
+
+@media screen and (max-width: 1024px) {
+    .contact {
+        height: auto;
+        margin-top: $spacing16;
+    }
+
+    .contact-input {
+        flex-direction: column;
+    }
+
+    .contact-input label {
+        align-self: start;
+    }
+
+    .contact input, .contact textarea {
+        width: 80vw;
+    }
+
+    .contact-input, .contact button {
+        margin-bottom: $spacing8;
+    }
+
+    .contact-area {
+        margin-bottom: $spacing;
+    }
+}

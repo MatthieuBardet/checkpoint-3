@@ -28,3 +28,13 @@ h2 {
 .light {
   color: $light;
 }
+
+@media screen and (max-width: 1024px) {
+  h1 {
+    font-size: $h1-font-size-r;
+  }
+
+  h2 {
+    font-size: $h2-font-size-r;
+  }
+}

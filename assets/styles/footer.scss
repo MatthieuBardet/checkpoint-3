@@ -7,11 +7,11 @@ footer {
 }
 
 footer .mail {
-  margin-right: $spacing4;
+  margin-right: $spacing8;
 }
 
 footer .bi-linkedin {
-  margin-left: $spacing4;
+  margin-left: $spacing8;
 }
 
 footer a:hover {
@@ -23,4 +23,11 @@ footer .before {
   bottom: 2px;
   margin-right: $spacing;
   color: $primary;
+}
+
+@media screen and (max-width: 425px) {
+  .footer-contact {
+    margin: 0 auto $spacing2;
+    width: 80%;
+  }
 }

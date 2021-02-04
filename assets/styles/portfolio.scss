@@ -1,7 +1,7 @@
 @import 'variables.scss';
 
 .realisations {
-  max-width: 80%;
+  max-width: 80vw;
   margin: auto;
 }
 
@@ -29,4 +29,24 @@
 
 .realisations-card {
   margin: $spacing24 0;
+}
+
+@media screen and (max-width: 1024px) {
+  .realisations-card {
+    flex-wrap: wrap;
+    margin: $spacing8 0;
+  }
+
+  .realisations img {
+    max-width: 90%;
+    margin: $spacing4 auto;
+  }
+
+  .reverse {
+    flex-direction: column-reverse;
+  }
+
+  .realisations h1 {
+    margin: $spacing16 auto;
+  }
 }
