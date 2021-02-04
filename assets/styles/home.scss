@@ -98,27 +98,27 @@ header {
 }
 
 .portfolio a {
-    background: $light;
-    border: none;
-    color: $dark;
-    font-weight: 700;
-    height: 48px;
-    width: 148px;
-    margin: $spacing 0;
+  background: $light;
+  border: none;
+  color: $dark;
+  font-weight: 700;
+  height: 48px;
+  width: 148px;
+  margin: $spacing 0;
 }
 
 .portfolio a:hover {
-    background: $primary;
-    color: $light;
+  background: $primary;
+  color: $light;
 }
 
 .portfolio a:focus {
-    background: $secondary;
-    color: $light;
+  background: $secondary;
+  color: $light;
 }
 
 .portfolio-card-body {
-background-color: $lesser-dark;
+  background-color: $lesser-dark;
 }
 
 .portfolio .card {
@@ -127,4 +127,27 @@ background-color: $lesser-dark;
   box-shadow: 5px 5px 0px 0px $light-opacity;
   padding: 0;
   margin: $spacing24 0;
+}
+
+@media screen and (max-width: 1024px) {
+  .portfolio, .skills {
+    padding: $spacing4 0;
+  }
+
+  .portfolio .card {
+    margin: $spacing4 auto;
+    width: 80%;
+  }
+
+  .header-title {
+    margin-top: $spacing16;
+  }
+
+  header {
+    height: auto;
+  }
+
+  a.scroll-down {
+    display: none;
+  }
 }

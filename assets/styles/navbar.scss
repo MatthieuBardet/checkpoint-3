@@ -25,6 +25,7 @@ hr {
   height: 30px;
   top: $spacing2;
   right: $spacing2;
+  z-index: 100;
 }
 
 .menu span {
@@ -66,7 +67,7 @@ hr {
 .modal {
   display: none;
   position: fixed;
-  z-index: 10;
+  z-index: 1000;
   padding: 0.5%;
   left: 0;
   top: 0;
@@ -179,6 +180,7 @@ hr {
 .nav ul li {
   display: inline-block;
   font-size: 3em;
+  margin: $spacing4 0;
 }
 
 .nav ul {

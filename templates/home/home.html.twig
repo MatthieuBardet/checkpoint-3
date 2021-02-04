@@ -50,7 +50,7 @@
                         <img class="card-img-top" src="{{ asset('uploads/'~portfolio.cover) }}" alt="{{ portfolio.name }}" title="{{ portfolio.name }}">
                         <div class="portfolio-card-body card-body d-flex flex-column align-items-center">
                             <h3 class="card-title">{{ portfolio.name }}</h3>
-                            <a href="#" class="btn btn-primary">En savoir plus</a>
+                            <a href="{{ path('portfolio_home') }}#{{ portfolio.name }}" class="btn btn-primary">En savoir plus</a>
                         </div>
                     </div>
                 {% endfor %}
