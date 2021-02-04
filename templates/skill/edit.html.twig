@@ -1,13 +1,15 @@
-{% extends 'base.html.twig' %}
+{% extends 'adminbase.html.twig' %}
 
 {% block title %}Edit Skill{% endblock %}
 
 {% block body %}
-    <h1>Edit Skill</h1>
+    <section class="admin d-flex flex-column align-items-center">
+        <h1>ÉDITER UNE COMPÉTENCE</h1>
 
-    {{ include('skill/_form.html.twig', {'button_label': 'Update'}) }}
+        {{ include('skill/_form.html.twig', {'button_label': 'Update'}) }}
 
-    <a href="{{ path('skill_index') }}">back to list</a>
+        <a class="btn btn-primary" href="{{ path('skill_index') }}">Retour</a>
 
-    {{ include('skill/_delete_form.html.twig') }}
+        {{ include('skill/_delete_form.html.twig') }}
+    </section>
 {% endblock %}

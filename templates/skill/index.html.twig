@@ -1,37 +1,39 @@
-{% extends 'base.html.twig' %}
+{% extends 'adminbase.html.twig' %}
 
 {% block title %}Skill index{% endblock %}
 
 {% block body %}
-    <h1>Skill index</h1>
-
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Name</th>
-                <th>Logo</th>
-                <th>actions</th>
-            </tr>
-        </thead>
-        <tbody>
-        {% for skill in skills %}
-            <tr>
-                <td>{{ skill.id }}</td>
-                <td>{{ skill.name }}</td>
-                <td>{{ skill.logo }}</td>
-                <td>
-                    <a href="{{ path('skill_show', {'id': skill.id}) }}">show</a>
-                    <a href="{{ path('skill_edit', {'id': skill.id}) }}">edit</a>
-                </td>
-            </tr>
-        {% else %}
-            <tr>
-                <td colspan="4">no records found</td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
-
-    <a href="{{ path('skill_new') }}">Create new</a>
+    <section class="admin d-flex flex-column align-items-center">
+        <h1 class="text-center admin-h1">Compétences</h1>
+        <a class="btn btn-primary" href="{{ path('skill_new') }}">Ajouter</a>
+        <div class="d-flex align-items-center">
+            <table class="table table-responsive">
+                <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Logo</th>
+                    <th>actions</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for skill in skills %}
+                    <tr>
+                        <td>{{ skill.id }}</td>
+                        <td>{{ skill.name }}</td>
+                        <td>{{ skill.logo }}</td>
+                        <td>
+                            <a class="btn btn-primary" href="{{ path('skill_show', {'id': skill.id}) }}">Voir</a>
+                            <a class="btn btn-primary" href="{{ path('skill_edit', {'id': skill.id}) }}">Éditer</a>
+                        </td>
+                    </tr>
+                {% else %}
+                    <tr>
+                        <td colspan="4">no records found</td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </section>
 {% endblock %}

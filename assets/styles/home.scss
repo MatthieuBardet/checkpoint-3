@@ -112,14 +112,19 @@ header {
     color: $light;
 }
 
+.portfolio a:focus {
+    background: $secondary;
+    color: $light;
+}
+
 .portfolio-card-body {
 background-color: $lesser-dark;
 }
 
 .portfolio .card {
-border: none;
-  border-radius: 3px;
-  box-shadow: 5px 5px 0px 0px $light-opacity;
-  padding: 0;
-  margin: $spacing4 0;
+    border: none;
+    border-radius: 3px;
+    box-shadow: 5px 5px 0px 0px $light-opacity;
+    padding: 0;
+    margin: $spacing4 0;
 }

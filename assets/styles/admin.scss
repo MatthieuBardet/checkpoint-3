@@ -1,0 +1,103 @@
+@import 'variables.scss';
+
+body {
+    background: $lesser-dark
+}
+
+.admin {
+    padding: $spacing16 0;
+}
+
+.admin-h1 {
+    $margin-bottom: $spacing8 !important;
+}
+
+.admin a {
+    background: $light;
+    border: none;
+    color: $dark;
+    font-weight: 700;
+    height: 48px;
+    width: 148px;
+    margin: $spacing 0;
+}
+
+.admin a:hover {
+    background: $primary;
+    color: $light;
+}
+
+.admin a:focus {
+    background: $secondary;
+    color: $light;
+}
+
+.admin-card {
+    background-color: $dark;
+    border: none;
+    border-radius: 3px;
+    box-shadow: 5px 5px 0px 0px $light-opacity;
+    padding: $spacing4;
+    margin: $spacing8 0;
+}
+
+table {
+    margin-top: $spacing8;
+}
+
+th, td {
+    color: $light;
+}
+
+th {
+    background: $dark;
+}
+
+.btn-delete {
+    background: $dark;
+    border: none;
+    color: $light;
+}
+
+.btn-delete:hover {
+    background: $secondary;
+}
+
+.admin label {
+    color: $light;
+}
+
+.admin input, .admin textarea {
+    border: none;
+    border-bottom: 1px solid $light;
+    background: $light-opacity-low;
+    height: 48px;
+    border-radius: 3px 3px 0 0;
+    color: $light;
+    margin: $spacing2 0;
+    width: 30vw;
+}
+
+.admin textarea {
+    height: 128px;
+}
+
+.admin input:focus, .admin textarea:focus {
+    background: $light-opacity;
+    border: none;
+}
+
+.admin button {
+    background: $light;
+    border: none;
+    color: $dark;
+    font-weight: 700;
+    height: 48px;
+    width: 128px;
+    margin: $spacing4 0;
+}
+
+.admin button:hover {
+    background: $primary;
+    color: $light;
+}

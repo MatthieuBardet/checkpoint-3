@@ -1,11 +1,14 @@
-{% extends 'base.html.twig' %}
+{% extends 'adminbase.html.twig' %}
 
 {% block title %}New Portfolio{% endblock %}
 
 {% block body %}
-    <h1>Create new Portfolio</h1>
+    <section class="admin">
+        <h1 class="text-center">AJOUTER UNE RÉALISATION</h1>
+        <div class="text-center">
+            {{ include('portfolio/_form.html.twig') }}
 
-    {{ include('portfolio/_form.html.twig') }}
-
-    <a href="{{ path('portfolio_index') }}">back to list</a>
+            <a href="{{ path('portfolio_index') }}">back to list</a>
+        </div>
+    </section>
 {% endblock %}
